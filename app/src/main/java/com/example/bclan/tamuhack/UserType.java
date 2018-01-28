@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 
 /**
  * Created by ledet awano on 1/28/2018.
@@ -14,6 +15,8 @@ import android.widget.Button;
 public class UserType extends AppCompatActivity {
 
     Button buttonToMaps;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +29,17 @@ public class UserType extends AppCompatActivity {
 
     public void buttonToMaps(View view) {
 
-        Intent i = new Intent(UserType.this, MapsPage.class);
+        boolean  checked = ((RadioButton) view).isChecked();
 
-        startActivity(i);
+        if(R.id.volunteerRadio == checked) {
+            Intent i = new Intent(UserType.this, MapsPage.class);
+
+            startActivity(i);
+        }
 
 
     }
+
+
 
 }
