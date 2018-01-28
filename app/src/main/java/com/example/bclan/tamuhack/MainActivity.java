@@ -1,5 +1,6 @@
 package com.example.bclan.tamuhack;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,8 +25,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // when the user log's in they 
+    // when the user log's in they are redirected to the user type page
     public void loginButton(View view) {
+
+
+
+        Intent i = new Intent(MainActivity.this, UserType.class);
+
+        startActivity(i);
+
 
     }
 

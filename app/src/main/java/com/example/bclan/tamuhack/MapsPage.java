@@ -10,7 +10,7 @@ import com.esri.arcgisruntime.mapping.view.MapView;
  * Created by bclan on 1/28/2018.
  */
 
-public class mapsPage extends AppCompatActivity {
+public class MapsPage extends AppCompatActivity {
 
     private MapView mMapView;
 
