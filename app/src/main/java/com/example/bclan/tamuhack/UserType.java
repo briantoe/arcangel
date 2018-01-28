@@ -38,6 +38,7 @@ public class UserType extends AppCompatActivity {
 
                 if (selectedId == 0 || selectedId == 1) {
                     Intent emtOrParamedics = new Intent(UserType.this, EmtOrParaMap.class );
+                    startActivity(emtOrParamedics);
 
                 } else if (selectedId == 1) {
                     Intent volunteerActivity = new Intent(UserType.this, MapsPage.class );
