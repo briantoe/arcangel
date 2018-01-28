@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.loginButton);
 
 
+
     }
 
     // when the user log's in they are redirected to the user type page
     public void loginButton(View view) {
-
 
 
         Intent i = new Intent(MainActivity.this, UserType.class);

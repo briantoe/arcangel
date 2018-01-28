@@ -25,6 +25,8 @@ public class MapsPage extends AppCompatActivity {
         mMapView = (MapView) findViewById(R.id.mapView);
         showWebMap();
 
+
+
     }
 
     private void showWebMap() {

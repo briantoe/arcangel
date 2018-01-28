@@ -27,47 +27,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paramedicsRadio" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+    <!--app:layout_constraintTop_toBottomOf="@+id/paramedicsRadio" />-->
+<RadioGroup android:id="@+id/radioGroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--<app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
 
     <RadioButton
         android:id="@+id/emtRadio"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="17dp"
-        android:onClick="hospitalServices"
+        android:onClick="userType"
+        android:tag="0"
         android:text="EMT"
         android:textColorLink="@color/grey"
         app:layout_constraintBottom_toTopOf="@+id/volunteerRadio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <RadioButton
-        android:id="@+id/paramedicsRadio"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginBottom="81dp"
-        android:onClick="hospitalServices"
-        android:text="PARAMEDICS"
-        android:textColorLink="@color/grey"
-        app:layout_constraintBottom_toTopOf="@+id/buttonToMaps"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/volunteerRadio" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioButton
         android:id="@+id/volunteerRadio"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="17dp"
-        android:onClick="volunteerService"
+        android:tag="1"
         android:text="VOLUNTEER"
+        android:onClick="userType"
         android:textColorLink="@color/grey"
         app:layout_constraintBottom_toTopOf="@+id/paramedicsRadio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emtRadio" />
-
+</RadioGroup>
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
@@ -76,8 +69,22 @@
         android:gravity="center"
         android:text="I AM A"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/emtRadio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/paramedicsRadio"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="81dp"
+        android:onClick="userType"
+        android:tag="1"
+        android:text="PARAMEDICS"
+        android:textColorLink="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToMaps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volunteerRadio" />
 </android.support.constraint.ConstraintLayout>

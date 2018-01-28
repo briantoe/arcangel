@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 /**
  * Created by ledet awano on 1/28/2018.
@@ -14,31 +15,41 @@ import android.widget.RadioButton;
 
 public class UserType extends AppCompatActivity {
 
-    Button buttonToMaps;
-
-
+    private Button buttonToMaps;
+    private RadioGroup radioGroup;
+    private int selectedId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_type_layout);
 
+        onSelectUsetType();
+
+    }
+    private void onSelectUsetType() {
+
+        radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
+        selectedId = radioGroup.getCheckedRadioButtonId();
         buttonToMaps = (Button) findViewById(R.id.buttonToMaps);
+        buttonToMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-    }
+                if (selectedId == 0 || selectedId == 1) {
+                    Intent emtOrParamedics = new Intent(UserType.this, EmtOrParaMap.class );
 
-    public void buttonToMaps(View view) {
-
-        boolean  checked = ((RadioButton) view).isChecked();
-
-        if(R.id.volunteerRadio == checked) {
-            Intent i = new Intent(UserType.this, MapsPage.class);
-
-            startActivity(i);
-        }
+                } else if (selectedId == 1) {
+                    Intent volunteerActivity = new Intent(UserType.this, MapsPage.class );
+                    startActivity(volunteerActivity);
+                }
+            }
+        });
 
 
-    }
+         }
+
+
 
 
 
