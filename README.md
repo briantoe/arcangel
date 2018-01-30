@@ -4,13 +4,21 @@ We were inspired to create this mobile and web application after the recent effe
 
 ## How it works 
 
-
+In the event of a natural disaster or catastrophic event, users can go to their twitter accounts and tweet their current situation and that they are in need of help. Our program will then filter tweets in that area that indicate a person is in need and will place their location on our map interface. The map will present the information in the form of a heat map in which volunteers, paramedics, or EMT can log onto our application and find the location where they can help the most people at once. Our web application also indicates the locations of the nearest hospitals that they can then be sent to. 
 
 ## Application Stack 
 
-## Challanges we ran into 
+The mobile app was build for Android devices using JAVA, Android Studio, and the ESRI API interface to display our data in real time. 
+The data was extracted from the Twitter API and Hospitals API using Matlab to parse and manipulate the data. 
+The ArcGIS platform was build to create our map interface and use our API's to display real-time locations and updates. 
 
-## Whats next for our product 
+## Challenges we ran into 
+
+We initially had difficulty getting real-time twitter information into the ESRI cloud where all our data is stored. We initially used R to parse our data but then had to use Matlab instead. 
+
+## Whats next for our product
+
+With further implementation we would want to have the hospital's display information regarding the current capacity of their hospital and if they had available spots for new patients. This would cut the time down for EMT and Paramedics as our application would suggest the fastest route to hospitals that weren't at full capacity. 
 
 ## Images 
 
